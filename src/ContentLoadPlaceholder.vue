@@ -1,7 +1,11 @@
 <template>
   <div class="placeholder-container" :style="getContainerCss">
-    <!-- Flex from bottom to up -->
-    <div class="content-line" :style="getContentLineCss" v-for="i of textLines"></div>
+    <div v-if="hasHeader" class="header" :style="getTitleCss">
+      <div v-for="i of titleLines" class="title-line" :style="getTitleLineCss"></div>
+    </div>
+    <div class="content" :style="getContentCss">
+      <div v-for="i of textLines" class="content-line" :style="getContentLineCss"></div>
+    </div>
   </div>
 </template>
 
@@ -34,10 +38,20 @@ export default {
     return util.computeArgs(this.width, this.height, this.title, this.image);
   },
   computed: {
+    hasHeader: function() {
+      return this.title || this.image;
+    },
+
     getContainerCss: function() {
       return {
         width: this.toPixel(this.width),
         height: this.toPixel(this.totalHeight),
+      }
+    },
+
+    getContentCss: function() {
+      return {
+        height: this.toPixel(this.contentHeight),
         'padding-top': this.toPixel(this.textLineHeight),
       }
     },
@@ -45,6 +59,19 @@ export default {
       return {
         width: this.toPixel(this.textLineWidth),
         'margin-bottom': this.toPixel(this.textLineHeight),
+      }
+    },
+
+    getTitleCss: function() {
+      return {
+        height: this.toPixel(this.headerHeight),
+        'padding-top': this.toPixel(this.titleLineHeight),
+      }
+    },
+    getTitleLineCss: function() {
+      return {
+        width: this.toPixel(this.titleLineWidth),
+        'margin-bottom': this.toPixel(this.titleLineHeight),
       }
     }
   },
@@ -60,11 +87,14 @@ export default {
   border: 2px solid #aaa;
   border-radius: 2px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
 }
 
-.empty-holder {
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content-line {
@@ -72,6 +102,19 @@ export default {
   margin: 0;
   padding: 0;
   background-color: #ddd;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-line {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
 }
 
 </style>
