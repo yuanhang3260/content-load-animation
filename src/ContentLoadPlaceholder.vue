@@ -1,7 +1,7 @@
 <template>
-  <div class="placeholder-container" :style="{width: toPixel(width), height: toPixel(height), 'padding-top': toPixel(lineHeight)}">
-    <div class="empty-holder" :style="{height: toPixel(emptyHeight), width: toPixel(width)}"></div>
-    <div class="content-line" :style="{width: toPixel(lineWidth), 'margin-bottom': toPixel(lineHeight)}" v-for="i of lines"></div>
+  <div class="placeholder-container" :style="getContainerCss">
+    <!-- Flex from bottom to up -->
+    <div class="content-line" :style="getContentLineCss" v-for="i of textLines"></div>
   </div>
 </template>
 
@@ -19,21 +19,38 @@ export default {
       type: Number,
       default: 200,
     },
+    // Has fake title?
     title: {
       type: Boolean,
       default: false,
     },
+    // Has fake profile image?
     image: {
       type: Boolean,
       default: false,
     },
   },
   data () {
-    return util.computeArgs(this.width, this.height);
+    return util.computeArgs(this.width, this.height, this.title, this.image);
+  },
+  computed: {
+    getContainerCss: function() {
+      return {
+        width: this.toPixel(this.width),
+        height: this.toPixel(this.totalHeight),
+        'padding-top': this.toPixel(this.textLineHeight),
+      }
+    },
+    getContentLineCss: function() {
+      return {
+        width: this.toPixel(this.textLineWidth),
+        'margin-bottom': this.toPixel(this.textLineHeight),
+      }
+    }
   },
   methods: {
     toPixel : util.toPixel,
-  }
+  },
 };
 </script>
 
