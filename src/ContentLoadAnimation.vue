@@ -86,7 +86,7 @@ export default {
     },
     getTitleLineCss: function() {
       return {
-        width: this.toPixel(this.titleLineWidth * design.randomRange(0.4, 1)),
+        width: this.toPixel(this.titleLineWidth * design.randomRange(0.3, 0.8)),
         'margin-bottom': this.toPixel(this.titleLineSpace),
       }
     },

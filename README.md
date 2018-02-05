@@ -1,4 +1,4 @@
-# content-load-placeholder
+# content-load-animation
 
 > A Vue.js project
 
