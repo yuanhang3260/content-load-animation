@@ -15,7 +15,7 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   entry: {
-    app: './src/main.js',
+    app: './src/app.js',
   },
   output: {
     path: config.build.assetsRoot,

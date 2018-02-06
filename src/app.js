@@ -9,7 +9,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#element-to-load',
   components: {
-    LoadAnimation    
+    LoadAnimation,
   }
 })
-
