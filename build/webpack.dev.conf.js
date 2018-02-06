@@ -16,7 +16,6 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 const devWebpackConfig = merge(baseWebpackConfig, {
   entry: {
     app: './src/main.js',
-    'content-load-animation': './src/index.js',
   },
   output: {
     path: config.build.assetsRoot,
@@ -24,20 +23,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath,
-
-    library: 'LoadAnimation',
-    libraryTarget: 'umd',
-    libraryExport: 'default',
-    umdNamedDefine: true,
-  },
-
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue'
-    }
   },
 
   module: {
