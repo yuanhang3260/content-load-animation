@@ -34,7 +34,7 @@ Note according to https://vuejs.org/v2/guide/components.html#Component-Naming-Co
 
 This component is built as UMD compliant, meaning it can also be used directly in browser, either by loading from \<scirpt\> tag, or AMD loader such as RequireJS.
   
-If loaded from <script>, it will be a global variable:
+If loaded from \<script\>, it will be a global variable:
 ```javascript
 window.LoadAnimation
 ```
