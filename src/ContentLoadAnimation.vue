@@ -28,7 +28,7 @@ export default {
     },
     height: {
       type: Number,
-      default: 200,
+      default: 100,
     },
     // Has fake title?
     title: {

@@ -2,8 +2,6 @@ const kFullContentLines = 5;
 const kContentLinesWithHeader = 3;
 const kTitleLines = 2;
 
-const kTotalHeightFactor = 0.5;
-
 const kHeaderHeightFactor = 0.4;
 const kImageSizeFactor = 0.65;
 
@@ -11,7 +9,7 @@ const kLineHeightFactor = 0.45;
 
 function designLayout(width, height, title, image) {
   const header = title || image;
-  const H = Math.floor(Math.min(width, height) * kTotalHeightFactor);
+  const H = Math.min(width, height);
 
   const headerHeight = Math.floor(H * kHeaderHeightFactor);
   const [titleLineHeight, titleLineSpace] =

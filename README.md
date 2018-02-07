@@ -1,7 +1,12 @@
 # content-load-animation
-A web content loading animation plugin using Vue.js.
+A web content loading animation component built with Vue.js. Width and height of the animation area are configurable, and it will automatically adjust the layout design.  
+  
+<img src="https://j.gifs.com/L8BvKr.gif" alt="example1" width="450px"/> <img src="https://j.gifs.com/qY8lO0.gif" alt="example2" width="200px"/>
 
 ### Installation
+```nohighlight
+npm install content-load-animation --save
+```
 
 ### Usage
 JavaScript:
@@ -20,7 +25,7 @@ new Vue({
 HTML:
 ```html
 <div id="element-to-load">
-  <load-animation :width=300 :height=300 :title=true :image=true></load-animation>
+  <load-animation :width=300 :height=150 :title=true :image=true></load-animation>
 </div>
 ```
 Note according to https://vuejs.org/v2/guide/components.html#Component-Naming-Conventions, you have to use kebab-case for HTML tag name. (In the above example, LoadAnimation => load-animation)
@@ -36,12 +41,7 @@ window.LoadAnimation
 If loaded by AMD:
 ```javascript
 require(["vue", "LoadAnimation"], function(Vue, LoadAnimation) {
-  new Vue({
-    el: '#element-to-load',
-    components: {
-      LoadAnimation    
-    }
-  });
+  // register component.
 });
 ```
 
