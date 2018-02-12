@@ -1,7 +1,7 @@
 {
   "name": "content-load-animation",
   "version": "1.0.5",
-  "description": "A Vue.js project",
+  "description": "Web Content Loading Animation",
   "author": "hangyuan <yuanhang3260@gmail.com>",
   "private": false,
   "scripts": {
