@@ -25,7 +25,7 @@ new Vue({
 HTML:
 ```html
 <div id="element-to-load">
-  <load-animation :width=300 :height=150 :title=true :image=true></load-animation>
+  <load-animation :width=300 :height=150 :title=true :image=true :circle-image=false></load-animation>
 </div>
 ```
 Note according to https://vuejs.org/v2/guide/components.html#Component-Naming-Conventions, you have to use kebab-case for HTML tag name. (In the above example, LoadAnimation => load-animation)

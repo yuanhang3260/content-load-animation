@@ -40,6 +40,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    circleImage: {
+      type: Boolean,
+      default:false,
+    }
   },
   data () {
     return design.designLayout(this.width, this.height, this.title, this.image);
@@ -73,10 +77,14 @@ export default {
     },
 
     getImageCss: function() {
-      return {
+      let style = {
         height: this.toPixel(this.imageSize),
         width: this.toPixel(this.imageSize),
       }
+      if (this.circleImage) {
+        style["border-radius"] = "50%";
+      }
+      return style;
     },
 
     getTitleBoxCss: function() {
