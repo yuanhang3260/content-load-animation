@@ -1,7 +1,7 @@
 # content-load-animation
 A web content loading animation component built with Vue.js. Width and height of the animation area are configurable, and it will automatically adjust the layout design.  
   
-<img src="https://j.gifs.com/L8BvKr.gif" alt="example1" width="450px"/> <img src="https://j.gifs.com/qY8lO0.gif" alt="example2" width="200px"/>
+<img src="https://j.gifs.com/oQn3ML.gif" alt="example1" width="450px"/> <img src="https://j.gifs.com/kZjYyJ.gif" alt="example2" width="200px"/>
 
 ### Installation
 ```nohighlight
