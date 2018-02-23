@@ -2,17 +2,17 @@ const kFullContentLines = 5;
 const kContentLinesWithHeader = 3;
 const kTitleLines = 2;
 
-const kHeaderHeightFactor = 0.42;
+const kHeaderHeightFactor = 0.45;
 const kImageSizeFactor = 0.65;
 
-const kLineHeightFactor = 0.43;
+const kLineHeightFactor = 0.38;
 
 function designLayout(width, height, title, image) {
   const header = title || image;
   const H = Math.min(width, height);
 
   const headerHeight = Math.floor(H * kHeaderHeightFactor);
-  const [titleLineHeight, titleLineSpace] =
+  var [titleLineHeight, titleLineSpace] =
       computeLineSize(headerHeight, kTitleLines);
   if (image) {
     var titleLineWidth = width - headerHeight - 2 * titleLineSpace;
@@ -31,8 +31,13 @@ function designLayout(width, height, title, image) {
 
   const [textLineHeight, textLineSpace] =
       computeLineSize(contentHeight, textLines);
-  
+ 
   const textLineWidth = width - 2 * textLineSpace;
+
+  titleLineHeight = textLineHeight;
+  titleLineSpace = Math.ceil(
+      (headerHeight - kTitleLines * titleLineHeight) / (kTitleLines + 1));
+
   return {
     totalHeight: H,
     contentHeight: contentHeight,

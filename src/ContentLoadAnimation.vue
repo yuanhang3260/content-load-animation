@@ -94,7 +94,7 @@ export default {
     },
     getTitleLineCss: function() {
       return {
-        width: this.toPixel(this.titleLineWidth * design.randomRange(0.3, 0.8)),
+        width: this.toPixel(this.titleLineWidth * design.randomRange(0.2, 0.7)),
         'margin-bottom': this.toPixel(this.titleLineSpace),
       }
     },
@@ -150,7 +150,7 @@ export default {
 }
 
 .profile-image {
-  background: linear-gradient(to right, #e0e0e0 10%, #ececec 40%, #e0e0e0 80%);
+  background: linear-gradient(to right, #e9e9e9 10%, #f0f0f0 40%, #e9e9e9 80%);
 }
 
 .title-box {
@@ -167,7 +167,7 @@ export default {
   flex-grow: 1;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #e0e0e0 8%, #eaeaea 45%, #e0e0e0 70%);
+  background: linear-gradient(to right, #e9e9e9 8%, #f0f0f0 45%, #e9e9e9 70%);
 }
 
 .content-box {
@@ -188,7 +188,7 @@ export default {
   flex-grow: 1;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #e9e9e9 8%, #f0f0f0 45%, #e9e9e9 70%);
+  background: linear-gradient(to right, #ebebeb 8%, #f3f3f3 45%, #ebebeb 70%);
 }
 
 .animated-background {
