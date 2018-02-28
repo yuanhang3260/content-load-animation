@@ -150,7 +150,7 @@ export default {
 }
 
 .profile-image {
-  background: linear-gradient(to right, #e9e9e9 10%, #f0f0f0 40%, #e9e9e9 80%);
+  background: linear-gradient(to right, #f3f3f3 25%, #ececec 40%, #f3f3f3 50%);
 }
 
 .title-box {
@@ -167,7 +167,7 @@ export default {
   flex-grow: 1;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #e9e9e9 8%, #f0f0f0 45%, #e9e9e9 70%);
+  background: linear-gradient(to right, #f5f5f5 25%, #ececec 40%, #f5f5f5 50%);
 }
 
 .content-box {
@@ -180,7 +180,7 @@ export default {
     background-position: 100% 0
   }
   to {
-    background-position: -100% 0
+    background-position: 0% 0
   }
 }
 
@@ -188,7 +188,7 @@ export default {
   flex-grow: 1;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #ebebeb 8%, #f3f3f3 45%, #ebebeb 70%);
+  background: linear-gradient(to right, #f7f7f7 25%, #ececec 40%, #f7f7f7 50%);
 }
 
 .animated-background {
@@ -197,7 +197,7 @@ export default {
   animation-iteration-count: infinite;
   animation-name: flowAnimation;
   animation-timing-function: linear;
-  background-size: 200% 100%;
+  background-size: 500% 100%;
 }
 
 </style>
