@@ -23,15 +23,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     umdNamedDefine: true,
   },
 
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue'
-    }
-  },
-
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
